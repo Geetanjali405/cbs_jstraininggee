@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id ="box">
+        <!-- <h1>Hello world</h1> -->
+    </div>
+    <script>
+        var a=5;
+        var b="Hello";
+        var c="5";
+        var d=true
+        var e=5.5
+        var d=["2","3",4, true,5.5,[5,6]];
+        var e={
+            name:"person 1",
+            age:30,
+            isEmployeed:true,
+            address:[
+                {
+                    line:"line1"
+                },
+                {
+                    line:"line2"
+                }
+            ],
+            metadata:{
+                key:"value"
+            }
+        }
+        console.log(e.name)
+        console.log(e.address[1].line)
+        f=null
+        g=undefined
+
+        console.log(null+5)//5
+        console.log(undefined+5)//nan
+
+        h=function(){
+            console.log("Say hi")
+        }
+        h()
+
+        function i(param1,param2){
+            return param1+param2
+        }
+
+        var res=i(5,6)
+        console.log(res)
+
+    //     var heading=document.createElement('h1')
+    //     heading.innerText="Hello World";
+    //     heading.style.color="red";
+    //     heading.style.border='1px solid black';
+    //    // document.body.appendChild(heading)
+
+    //     var box=document.getElementById("box")
+    //     box.appendChild(heading)
+
+        for(var i=0;i<100;i++){
+            var box=document.createElement("div");
+            box.style.background=
+            'rgb('+Math.floor(Math.random()*255)+
+            ','+
+            Math.floor(Math.random()*255)+
+            ','+
+            Math.floor(Math.random()*255)+
+            ')';
+            box.style.width="100px";
+            
+            box.style.position="relative";
+            box.style.left=Math.floor(Math.random()*500)+'px';
+            box.style.top=Math.floor(Math.random()*500)+'px';
+            box.style.height=Math.floor(Math.random()*100)+'px';
+            box.style.marginBottom=Math.floor(Math.random()*100)+'px';
+            document.body.appendChild(box);
+        }
+    </script>
+</body>
+</html>
